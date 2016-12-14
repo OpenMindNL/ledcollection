@@ -1,5 +1,3 @@
-# LED Collection
-
 # 69 animations
 * 11 different patterns.
 * Each pattern in various colors.
