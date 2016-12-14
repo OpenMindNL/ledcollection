@@ -1,0 +1,520 @@
+{
+
+	"id": "openmindnl.ledcollection",
+	"name": {
+		"en": "LED Ring collection"
+	
+},
+	"version": "1.0.0",
+	"compatibility": "0.x || 1.x",
+
+	"author": {
+		"name": "Alex van den Berg",
+		"email": "openmind_nl@hotmail.com"
+
+	},
+	"images": {
+		"large": "./assets/images/large.png",
+		"small": "./assets/images/small.png"
+	},
+	"category": "appliances",
+	"description": {
+		"en": "LED Ring patterns for Homey",
+		"nl": "LED Ring patronen voor Homey"
+    	},
+
+	"dependencies": {
+		"net": "*"
+	},
+
+	"screensavers": [
+	    {
+	        "name": "white_alert",
+	        "title": {
+	            "en": "Alert - White",
+	            "nl": "Alarm - Wit"
+	        }
+	    },
+	    {
+	        "name": "red_alert",
+	        "title": {
+	            "en": "Alert - Red",
+	            "nl": "Alarm - Rood"
+	        }
+	    },
+	    {
+	        "name": "orange_alert",
+	        "title": {
+	            "en": "Alert - Orange",
+	            "nl": "Alarm - Oranje"
+	        }
+	    },
+	    {
+	        "name": "yellow_alert",
+	        "title": {
+	            "en": "Alert - Yellow",
+	            "nl": "Alarm - Geel"
+	        }
+	    },
+	    {
+	        "name": "green_alert",
+	        "title": {
+	            "en": "Alert - Green",
+	            "nl": "Alarm - Groen"
+	        }
+	    },
+	    {
+	        "name": "cyan_alert",
+	        "title": {
+	            "en": "Alert - Cyan",
+	            "nl": "Alarm - Cyaan"
+	        }
+	    },
+	    {
+	        "name": "blue_alert",
+	        "title": {
+	            "en": "Alert - Blue",
+	            "nl": "Alarm - Blauw"
+	        }
+	    },
+	    {
+	        "name": "magenta_alert",
+	        "title": {
+	            "en": "Alert - Magenta",
+	            "nl": "Alarm - Magenta"
+	        }
+	    },
+	    {
+	        "name": "red_blue_alert",
+	        "title": {
+	            "en": "Alert - Red & Blue",
+	            "nl": "Alarm - Rood & Blauw"
+	        }
+	    },
+	    {
+	        "name": "led_scanner_red",
+	        "title": {
+	            "en": "Scanner - Red",
+	            "nl": "Scanner - Rood"
+	        }
+	    },
+	    {
+	        "name": "led_scanner_orange",
+	        "title": {
+	            "en": "Scanner - Orange",
+	            "nl": "Scanner - Oranje"
+	        }
+	    },
+	    {
+	        "name": "led_scanner_yellow",
+	        "title": {
+	            "en": "Scanner - Yellow",
+	            "nl": "Scanner - Geel"
+	        }
+	    },
+	    {
+	        "name": "led_scanner_green",
+	        "title": {
+	            "en": "Scanner - Green",
+	            "nl": "Scanner - Groen"
+	        }
+	    },
+	    {
+	        "name": "led_scanner_cyan",
+	        "title": {
+	            "en": "Scanner - Cyan",
+	            "nl": "Scanner - Cyaan"
+	        }
+	    },
+	    {
+	        "name": "led_scanner_blue",
+	        "title": {
+	            "en": "Scanner - Blue",
+	            "nl": "Scanner - Blauw"
+	        }
+	    },
+	    {
+	        "name": "led_scanner_purple",
+	        "title": {
+	            "en": "Scanner - Purple",
+	            "nl": "Scanner - Paars"
+	        }
+	    },
+	    {
+	        "name": "led_scanner_magenta",
+	        "title": {
+	            "en": "Scanner - Magenta",
+	            "nl": "Scanner - Magenta"
+	        }
+	    },
+	    {
+	        "name": "led_gort_red_yellow",
+	        "title": {
+	            "en": "Gort - Red & Yellow",
+	            "nl": "Gort - Rood & Geel"
+	        }
+	    },
+	    {
+	        "name": "led_gort_blue_magenta",
+	        "title": {
+	            "en": "Gort - Blue & Magenta",
+	            "nl": "Gort - Blauw & Magenta"
+	        }
+	    },
+	    {
+	        "name": "led_gort_green_cyan",
+	        "title": {
+	            "en": "Gort - Green & Cyan",
+	            "nl": "Gort - Groen & Cyan"
+	        }
+	    },
+	    {
+	        "name": "led_random_colors",
+	        "title": {
+	            "en": "Ring - Random changing multicolored",
+	            "nl": "Ring - Willekeurig wisselend veelkleurig"
+	        }
+	    },
+	    {
+	        "name": "led_sparkle_random",
+	        "title": {
+	            "en": "Sparkle - Random colors",
+	            "nl": "Fonkeling - Willekeurige kleuren"
+	        }
+	    },
+	    {
+	        "name": "led_sparkle_red",
+	        "title": {
+	            "en": "Sparkle - Red",
+	            "nl": "Fonkeling - Rood"
+	        }
+	    },
+	    {
+	        "name": "led_sparkle_orange",
+	        "title": {
+	            "en": "Sparkle - Orange",
+	            "nl": "Fonkeling - Oranje"
+	        }
+	    },
+	    {
+	        "name": "led_sparkle_yellow",
+	        "title": {
+	            "en": "Sparkle - Yellow",
+	            "nl": "Fonkeling - Geel"
+	        }
+	    },
+	    {
+	        "name": "led_sparkle_green",
+	        "title": {
+	            "en": "Sparkle - Green",
+	            "nl": "Fonkeling - Groen"
+	        }
+	    },
+	    {
+	        "name": "led_sparkle_cyan",
+	        "title": {
+	            "en": "Sparkle - Cyan",
+	            "nl": "Fonkeling - Cyaan"
+	        }
+	    },
+	    {
+	        "name": "led_sparkle_blue",
+	        "title": {
+	            "en": "Sparkle - Blue",
+	            "nl": "Fonkeling - Blauw"
+	        }
+	    },
+	    {
+	        "name": "led_sparkle_purple",
+	        "title": {
+	            "en": "Sparkle - Purple",
+	            "nl": "Fonkeling - Paars"
+	        }
+	    },
+	    {
+	        "name": "led_sparkle_magenta",
+	        "title": {
+	            "en": "Sparkle - Magenta",
+	            "nl": "Fonkeling - Magenta"
+	        }
+	    },
+	    {
+	        "name": "led_satellite_red",
+	        "title": {
+	            "en": "Satellite - Red",
+	            "nl": "Satelliet - Rood"
+	        }
+	    },
+	    {
+	        "name": "led_satellite_orange",
+	        "title": {
+	            "en": "Satellite - Orange",
+	            "nl": "Satelliet - Oranje"
+	        }
+	    },
+	    {
+	        "name": "led_satellite_yellow",
+	        "title": {
+	            "en": "Satellite - Yellow",
+	            "nl": "Satelliet - Geel"
+	        }
+	    },
+	    {
+	        "name": "led_satellite_green",
+	        "title": {
+	            "en": "Satellite - Green",
+	            "nl": "Satelliet - Groen"
+	        }
+	    },
+	    {
+	        "name": "led_satellite_cyan",
+	        "title": {
+	            "en": "Satellite - Cyan",
+	            "nl": "Satelliet - Cyaan"
+	        }
+	    },
+	    {
+	        "name": "led_satellite_blue",
+	        "title": {
+	            "en": "Satellite - Blue",
+	            "nl": "Satelliet - Blauw"
+	        }
+	    },
+	    {
+	        "name": "led_satellite_purple",
+	        "title": {
+	            "en": "Satellite - Purple",
+	            "nl": "Satelliet - Paars"
+	        }
+	    },
+	    {
+	        "name": "led_satellite_magenta",
+	        "title": {
+	            "en": "Satellite - Magenta",
+	            "nl": "Satelliet - Magenta"
+	        }
+	    },
+	    {
+	        "name": "led_lighthouse_white",
+	        "title": {
+	            "en": "Lighthouse - White",
+	            "nl": "Vuurtoren - Wit"
+	        }
+	    },
+	    {
+	        "name": "led_lighthouse_red",
+	        "title": {
+	            "en": "Lighthouse - Red",
+	            "nl": "Vuurtoren - Rood"
+	        }
+	    },
+	    {
+	        "name": "led_lighthouse_yellow",
+	        "title": {
+	            "en": "Lighthouse - Yellow",
+	            "nl": "Vuurtoren - Geel"
+	        }
+	    },
+	    {
+	        "name": "led_lighthouse_green",
+	        "title": {
+	            "en": "Lighthouse - Green",
+	            "nl": "Vuurtoren - Groen"
+	        }
+	    },
+	    {
+	        "name": "led_lighthouse_cyan",
+	        "title": {
+	            "en": "Lighthouse - Cyan",
+	            "nl": "Vuurtoren - Cyaan"
+	        }
+	    },
+	    {
+	        "name": "led_lighthouse_blue",
+	        "title": {
+	            "en": "Lighthouse - Blue",
+	            "nl": "Vuurtoren - Blauw"
+	        }
+	    },
+	    {
+	        "name": "led_lighthouse_magenta",
+	        "title": {
+	            "en": "Lighthouse - Magenta",
+	            "nl": "Vuurtoren - Magenta"
+	        }
+	    },
+	    {
+	        "name": "led_triangle_rgb",
+	        "title": {
+	            "en": "Triangle - Red Green Blue",
+	            "nl": "Driehoek - Rode Groen Blauw"
+	        }
+	    },
+	    {
+	        "name": "led_triangle_rgb_fast",
+	        "title": {
+	            "en": "Triangle - Red Green Blue (fast)",
+	            "nl": "Driehoek - Rode Groen Blauw (snel)"
+	        }
+	    },
+	    {
+	        "name": "led_triangle_cmy",
+	        "title": {
+	            "en": "Triangle - Cyan Magenta Yellow",
+	            "nl": "Driehoek - Cyaan Magenta Geel"
+	        }
+	    },
+	    {
+	        "name": "led_triangle_cmy_fast",
+	        "title": {
+	            "en": "Triangle - Cyan Magenta Yellow (fast)",
+	            "nl": "Driehoek - Cyaan Magenta Geel (snel)"
+	        }
+	    },
+	    {
+	        "name": "led_frontpulse_red",
+	        "title": {
+	            "en": "Frontal pulse - Red",
+	            "nl": "Frontale puls - Rood"
+	        }
+	    },
+	    {
+	        "name": "led_frontpulse_orange",
+	        "title": {
+	            "en": "Frontal pulse - Orange",
+	            "nl": "Frontale puls - Oranje"
+	        }
+	    },
+	    {
+	        "name": "led_frontpulse_yellow",
+	        "title": {
+	            "en": "Frontal pulse - Yellow",
+	            "nl": "Frontale puls - Geel"
+	        }
+	    },
+	    {
+	        "name": "led_frontpulse_green",
+	        "title": {
+	            "en": "Frontal pulse - Green",
+	            "nl": "Frontale puls - Groen"
+	        }
+	    },
+	    {
+	        "name": "led_frontpulse_cyan",
+	        "title": {
+	            "en": "Frontal pulse - Cyan",
+	            "nl": "Frontale puls - Cyaan"
+	        }
+	    },
+	    {
+	        "name": "led_frontpulse_blue",
+	        "title": {
+	            "en": "Frontal pulse - Blue",
+	            "nl": "Frontale puls - Blauw"
+	        }
+	    },
+	    {
+	        "name": "led_frontpulse_purple",
+	        "title": {
+	            "en": "Frontal pulse - Purple",
+	            "nl": "Frontale puls - Paars"
+	        }
+	    },
+	    {
+	        "name": "led_frontpulse_magenta",
+	        "title": {
+	            "en": "Frontal pulse - Magenta",
+	            "nl": "Frontale puls - Magenta"
+	        }
+	    },
+	    {
+	        "name": "led_oncoming_red_green",
+	        "title": {
+	            "en": "Oncoming - Red & Green",
+	            "nl": "Tegenligger - Rood & Groen"
+	        }
+	    },
+	    {
+	        "name": "led_oncoming_red_blue",
+	        "title": {
+	            "en": "Oncoming - Red & Blue",
+	            "nl": "Tegenligger - Rood en Blauw"
+	        }
+	    },
+	    {
+	        "name": "led_oncoming_red_cyan",
+	        "title": {
+	            "en": "Oncoming - Red en Cyan",
+	            "nl": "Tegenligger - Rood en Cyaan"
+	        }
+	    },
+	    {
+	        "name": "led_oncoming_green_blue",
+	        "title": {
+	            "en": "Oncoming - Green & Blue",
+	            "nl": "Tegenligger - Groen & Blauw"
+	        }
+	    },
+	    {
+	        "name": "led_oncoming_green_magenta",
+	        "title": {
+	            "en": "Oncoming - Green & Magenta",
+	            "nl": "Tegenligger - Groen & Magenta"
+	        }
+	    },
+	    {
+	        "name": "led_oncoming_blue_yellow",
+	        "title": {
+	            "en": "Oncoming - Blue & Yellow",
+	            "nl": "Tegenligger - Blauw & Geel"
+	        }
+	    },
+	    {
+	        "name": "led_newtonian_red_green",
+	        "title": {
+	            "en": "Newtonian lights - Red & Green",
+	            "nl": "Newton lichten - Rood & Groen"
+	        }
+	    },
+	    {
+	        "name": "led_newtonian_red_blue",
+	        "title": {
+	            "en": "Newtonian lights - Red & Blue",
+	            "nl": "Newton lichten - Rood & Blauw"
+	        }
+	    },
+	    {
+	        "name": "led_newtonian_red_cyan",
+	        "title": {
+	            "en": "Newtonian lights - Red & Cyan",
+	            "nl": "Newton lichten - Rood & Cyaan"
+	        }
+	    },
+	    {
+	        "name": "led_newtonian_green_blue",
+	        "title": {
+	            "en": "Newtonian lights - Green & Blue",
+	            "nl": "Newton lichten - Groen & Blauw"
+	        }
+	    },
+	    {
+	        "name": "led_newtonian_green_magenta",
+	        "title": {
+	            "en": "Newtonian lights - Green & Magenta",
+	            "nl": "Newton lichten - Groen & Magenta"
+	        }
+	    },
+	    {
+	        "name": "led_newtonian_blue_yellow",
+	        "title": {
+	            "en": "Newtonian lights - Blue & Yellow",
+	            "nl": "Newton lichten - Blauw & Geel"
+	        }
+	    }
+	]
+,
+
+	"permissions": [
+	    "homey:manager:ledring"
+	]
+}
