@@ -1,4 +1,4 @@
-# ledcollection
+# LED Collection
 
 # 69 animations
 * 11 different patterns.
