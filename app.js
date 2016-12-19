@@ -21,8 +21,9 @@ Array.prototype.concat.apply([], [
 		screensaver
 	)),
 	[
+		{ id: '' +
+		'', colors: [[255, 0, 0]] },
 		{ id: 'led_scanner_red', colors: [[255, 0, 0]] },
-		{ id: 'led_scanner_red', colors: [[255, 127, 0]] },
 		{ id: 'led_scanner_orange', colors: [[255, 127, 0]] },
 		{ id: 'led_scanner_yellow', colors: [[255, 255, 0]] },
 		{ id: 'led_scanner_green', colors: [[0, 255, 0]] },
@@ -82,14 +83,14 @@ Array.prototype.concat.apply([], [
 		{ id: 'led_lighthouse_blue', colors: [[0, 0, 255]] },
 		{ id: 'led_lighthouse_cyan', colors: [[0, 255, 255]] },
 		{ id: 'led_lighthouse_magenta', colors: [[255, 0, 255]] },
-		{ id: 'led_lighthouse_yellow', colors: [[255, 0, 255]] },
+		{ id: 'led_lighthouse_yellow', colors: [[255, 255, 0]] },
 	].map(screensaver => Object.assign(
 		{ generator: generateLighthouse, options: Object.assign({ fps: 1, tfps: 60, rpm: 10 }, screensaver.options) },
 		screensaver
 	)),
 	[
 		{ id: 'led_triangle_rgb', colors: [[255, 0, 0], [0, 255, 0], [0, 0, 255]] },
-		{ id: 'animation_led_triangle_rgb_fast', colors: [[255, 0, 0], [0, 255, 0], [0, 0, 255]], options: { rpm: 60 } },
+		{ id: 'led_triangle_rgb_fast', colors: [[255, 0, 0], [0, 255, 0], [0, 0, 255]], options: { rpm: 60 } },
 		{ id: 'led_triangle_cmy', colors: [[0, 255, 255], [255, 0, 255], [255, 255, 0]] },
 		{ id: 'led_triangle_cmy_fast', colors: [[0, 255, 255], [255, 0, 255], [255, 255, 0]], options: { rpm: 60 } },
 	].map(screensaver => Object.assign(
