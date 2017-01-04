@@ -1,8 +1,8 @@
-## 197 LED Ring displays ##
+## 197 LED Ring displays
 * 17 different patterns.
 * Each pattern in various colors.
 
-## Usage ##
+## Usage
 * Screensaver
 * Warnings in flows.
 * Informative indicators in flows.
@@ -17,7 +17,7 @@ If you have any requests for LED Ring displays, please post them at https://foru
 </form>
 - - - -
 
-### v1.2.0 ###
+v1.2.0
 * 4 additional displays: 
  * Satellite - Color flow 
  * Satellite - Random colors
@@ -26,7 +26,7 @@ If you have any requests for LED Ring displays, please post them at https://foru
 
 * Donate button added to the app page.
 
-### v1.1.0 ###
+v1.1.0
 * 6 new patterns: 
  * Flash
  * Solid.
@@ -46,5 +46,5 @@ If you have any requests for LED Ring displays, please post them at https://foru
 
 * NOTE: Because of some id-changes, you'll find a broken link when you had 'Oncoming - Blue & Yellow' and/or 'Newtonian lights - Blue & Yellow' assigned to one of the ...then-actions in your Flows.
 
-### v1.0.0 ###
+v1.0.0
 * First public release
