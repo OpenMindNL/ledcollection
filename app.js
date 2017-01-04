@@ -99,7 +99,9 @@ Array.prototype.concat.apply([], [
 		{ id: 'led_satellite_cyan', colors: [[0, 255, 255]] },
 		{ id: 'led_satellite_blue', colors: [[0, 0, 255]] },
 		{ id: 'led_satellite_purple', colors: [[64, 0, 255]] },
-		{ id: 'led_satellite_magenta', colors: [[255, 0, 255]] }
+		{ id: 'led_satellite_magenta', colors: [[255, 0, 255]] },
+		{ id: 'led_satellite_flow', colors: [[0, 0, 0]] },
+		{ id: 'led_satellite_random', colors: [[-1, -1, -1]] }
 	].map(screensaver => Object.assign(
 		{ generator: generateSatellite, options: Object.assign({ fps: 1, tfps: 60, rpm: 10 }, screensaver.options) },
 		screensaver
@@ -113,7 +115,9 @@ Array.prototype.concat.apply([], [
 		{ id: 'led_lighthouse_cyan', colors: [[0, 255, 255]] },
 		{ id: 'led_lighthouse_blue', colors: [[0, 0, 255]] },
 		{ id: 'led_lighthouse_purple', colors: [[64, 0, 255]] },
-		{ id: 'led_lighthouse_magenta', colors: [[255, 0, 255]] }
+		{ id: 'led_lighthouse_magenta', colors: [[255, 0, 255]] },
+		{ id: 'led_lighthouse_flow', colors: [[0, 0, 0]] },
+		{ id: 'led_lighthouse_random', colors: [[-1, -1, -1]] }
 	].map(screensaver => Object.assign(
 		{ generator: generateLighthouse, options: Object.assign({ fps: 1, tfps: 60, rpm: 10 }, screensaver.options) },
 		screensaver
@@ -355,14 +359,7 @@ function generateFlash( colRGB ) {
 
 function generateFlow() {
 	var frames = [];
-	var col = [], r = 255, g = 0, b = 0;
-
-	while( g < 255 ){ g += 51; col.push([r, g, b]); }
-	while( r >0 )	{ r -= 51; col.push([r, g, b]); }
-	while( b < 255 ){ b += 51; col.push([r, g, b]); }
-	while( g >0 )	{ g -= 51; col.push([r, g, b]); }
-	while( r < 255 ){ r += 51; col.push([r, g, b]); }
-	while( b >0 )	{ b -= 51; col.push([r, g, b]); }
+	var col = getColorFlow();
 
 	// for every frame...
 	for( var fr = 0; fr < col.length; fr++ ){
@@ -465,32 +462,56 @@ function generateSparkle( colRGB ) {
 
 function generateSatellite( colRGB ) {
 	var frames = [];
-	var frame = [];
-	var color = [];
 
-	// for every pixel...
-	for( var pixel = 0; pixel < 24; pixel++ ) {
-		if( pixel == 0 ) { color = colRGB; } else  { color = [ 0, 0, 0 ]; }
-		frame.push({ r: color[0], g: color[1], b: color[2] });
+	if(colRGB[0] == 0 && colRGB[1] == 0 && colRGB[2] == 0){ // color flow
+		var col = getColorFlow();
+	} else if(colRGB[0] == -1 && colRGB[1] == -1 && colRGB[2] == -1){ // random colors
+		var col = getRandomColors();
+	} else { // fixed color
+		var col = [colRGB];
 	}
-	frames.push(frame);
+
+	// for every frame...
+	for( var fr = 0; fr < col.length; fr++ ){
+		var frame = [];
+
+		// for every pixel...
+		for( var pixel = 0; pixel < 24; pixel++ ) {
+			if( pixel == 0 ) { var color = col[fr]; } else  { var color = [ 0, 0, 0 ]; }
+			frame.push({ r: color[0], g: color[1], b: color[2] });
+		}
+		frames.push(frame);
+	}
 	return frames;
 }
 
 function generateLighthouse( colRGB ){
 	var frames = [];
-	var frame = [];
 
-	// for every pixel...
-	for( var pixel = 0; pixel < 24; pixel++ ) {
-		var color = [0,0,0];
-
-		if( ( pixel == 6 ) || ( pixel == 18 ) ){
-			color = colRGB;
-		}
-		frame.push({ r: color[0], g: color[1], b: color[2] });
+	if(colRGB[0] == 0 && colRGB[1] == 0 && colRGB[2] == 0){ // color flow
+		var col = getColorFlow();
+	} else if(colRGB[0] == -1 && colRGB[1] == -1 && colRGB[2] == -1){ // random colors
+		var col = getRandomColors();
+	} else { // fixed color
+		var col = [colRGB];
 	}
-	frames.push(frame);
+
+	// for every frame...
+	for( var fr = 0; fr < col.length; fr++ ){
+		var frame = [];
+
+		// for every pixel...
+		for( var pixel = 0; pixel < 24; pixel++ ) {
+
+			if( ( pixel == 6 ) || ( pixel == 18 ) ){
+				var color = col[fr];
+			} else {
+				var color = [0,0,0];
+			}
+			frame.push({ r: color[0], g: color[1], b: color[2] });
+		}
+		frames.push(frame);
+	}
 	return frames;
 }
 
@@ -803,4 +824,33 @@ function generateLedAlert( colRGB1, colRGB2 ) {
 	}
 	frames.push(frame);
 	return frames;
+}
+
+
+// ==================== various functions ==================== //
+
+function getColorFlow(){
+	var fStep = 51, col = [], r = 255, g = 0, b = 0;
+	while( g < 255 ){ g += fStep; col.push([r, g, b]); }
+	while( r >0 )	{ r -= fStep; col.push([r, g, b]); }
+	while( b < 255 ){ b += fStep; col.push([r, g, b]); }
+	while( g >0 )	{ g -= fStep; col.push([r, g, b]); }
+	while( r < 255 ){ r += fStep; col.push([r, g, b]); }
+	while( b >0 )	{ b -= fStep; col.push([r, g, b]); }
+	return col;
+}
+
+function getRandomColors(){
+	var col = [], c = [0, 0, 0];
+	for( var i = 0; i < 109; i++ ){
+			c = [0, 0, 0];
+		while(c[0] == c[1] && c[1] == c[2]){
+			c[0] = Math.floor( Math.random() * 4)*85;
+			c[1] = Math.floor( Math.random() * 4)*85;
+			c[2] = Math.floor( Math.random() * 4)*85;
+		}
+		if( c[0]>0 && c[1]>0 && c[2]>0 ){c[Math.floor(Math.random()*3)] = 0;}
+		col.push(c);
+	}
+	return col;
 }
