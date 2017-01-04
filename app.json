@@ -6,7 +6,7 @@
 		"nl": "LED-Ring collectie"
 	
 },
-	"version": "1.1.0",
+	"version": "1.2.0",
 	"compatibility": "0.x || 1.x",
 
 	"author": {
@@ -436,6 +436,20 @@
 	        }
 	    },
 	    {
+	        "name": "led_satellite_flow",
+	        "title": {
+	            "en": "Satellite - Color flow",
+	            "nl": "Satelliet - Overvloeiende kleuren"
+	        }
+	    },
+	    {
+	        "name": "led_satellite_random",
+	        "title": {
+	            "en": "Satellite - Random colors",
+	            "nl": "Satelliet - Willekeurige kleuren"
+	        }
+	    },
+	    {
 	        "name": "led_lighthouse_white",
 	        "title": {
 	            "en": "Lighthouse - White",
@@ -496,6 +510,20 @@
 	        "title": {
 	            "en": "Lighthouse - Magenta",
 	            "nl": "Vuurtoren - Magenta"
+	        }
+	    },
+	    {
+	        "name": "led_lighthouse_flow",
+	        "title": {
+	            "en": "Lighthouse - Color flow",
+	            "nl": "Vuurtoren - Overvloeiende kleuren"
+	        }
+	    },
+	    {
+	        "name": "led_lighthouse_random",
+	        "title": {
+	            "en": "Lighthouse - Random colors",
+	            "nl": "Vuurtoren - Willekeurige kleuren"
 	        }
 	    },
 	    {
