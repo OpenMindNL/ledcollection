@@ -6,7 +6,7 @@
 		"nl": "LED-Ring collectie"
 	
 },
-	"version": "1.2.0",
+	"version": "1.3.0",
 	"compatibility": "0.x || 1.x",
 
 	"author": {
@@ -18,7 +18,11 @@
 		"large": "./assets/images/large.png",
 		"small": "./assets/images/small.png"
 	},
-	"category": "appliances",
+	"category": [
+		"appliances",
+		"lights",
+		"tools"
+		],
 	"description": {
 		"en": "LED Ring patterns for Homey",
 		"nl": "LED Ring patronen voor Homey"
@@ -228,8 +232,8 @@
 	    {
 	        "name": "led_flow",
 	        "title": {
-	            "en": "Color flow",
-	            "nl": "Overvloeiende kleuren"
+	            "en": "Solid - Color flow",
+	            "nl": "Effen - Overvloeiende kleuren"
 	        }
 	    },
 	    {
@@ -303,6 +307,13 @@
 	        }
 	    },
 	    {
+	        "name": "led_breathe_flow",
+	        "title": {
+	            "en": "Breathing - Color flow",
+	            "nl": "Ademend - Overvloeiende kleuren"
+	        }
+	    },
+	    {
 	        "name": "led_sparkle_white",
 	        "title": {
 	            "en": "Sparkle - White",
@@ -363,6 +374,13 @@
 	        "title": {
 	            "en": "Sparkle - Magenta",
 	            "nl": "Fonkeling - Magenta"
+	        }
+	    },
+	    {
+	        "name": "led_sparkle_flow",
+	        "title": {
+	            "en": "Sparkle - Color flow",
+	            "nl": "Fonkeling - Overvloeiende kleuren"
 	        }
 	    },
 	    {
@@ -527,6 +545,146 @@
 	        }
 	    },
 	    {
+	        "name": "led_clockwork_white",
+	        "title": {
+	            "en": "Clockwork - White",
+	            "nl": "Uurwerk - Wit"
+	        }
+	    },
+	    {
+	        "name": "led_clockwork_red",
+	        "title": {
+	            "en": "Clockwork - Red",
+	            "nl": "Uurwerk - Rood"
+	        }
+	    },
+	    {
+	        "name": "led_clockwork_orange",
+	        "title": {
+	            "en": "Clockwork - Orange",
+	            "nl": "Uurwerk - Oranje"
+	        }
+	    },
+	    {
+	        "name": "led_clockwork_yellow",
+	        "title": {
+	            "en": "Clockwork - Yellow",
+	            "nl": "Uurwerk - Geel"
+	        }
+	    },
+	    {
+	        "name": "led_clockwork_green",
+	        "title": {
+	            "en": "Clockwork - Green",
+	            "nl": "Uurwerk - Groen"
+	        }
+	    },
+	    {
+	        "name": "led_clockwork_cyan",
+	        "title": {
+	            "en": "Clockwork - Cyan",
+	            "nl": "Uurwerk - Cyaan"
+	        }
+	    },
+	    {
+	        "name": "led_clockwork_blue",
+	        "title": {
+	            "en": "Clockwork - Blue",
+	            "nl": "Uurwerk - Blauw"
+	        }
+	    },
+	    {
+	        "name": "led_clockwork_purple",
+	        "title": {
+	            "en": "Clockwork - Purple",
+	            "nl": "Uurwerk - Paars"
+	        }
+	    },
+	    {
+	        "name": "led_clockwork_magenta",
+	        "title": {
+	            "en": "Clockwork - Magenta",
+	            "nl": "Uurwerk - Magenta"
+	        }
+	    },
+	    {
+	        "name": "led_clockwork_flow",
+	        "title": {
+	            "en": "Clockwork - Color flow",
+	            "nl": "Uurwerk - Overvloeiende kleuren"
+	        }
+	    },
+	    {
+	        "name": "led_butterfly_white",
+	        "title": {
+	            "en": "Butterfly - White",
+	            "nl": "Vlinder - Wit"
+	        }
+	    },
+	    {
+	        "name": "led_butterfly_red",
+	        "title": {
+	            "en": "Butterfly - Red",
+	            "nl": "Vlinder - Rood"
+	        }
+	    },
+	    {
+	        "name": "led_butterfly_orange",
+	        "title": {
+	            "en": "Butterfly - Orange",
+	            "nl": "Vlinder - Oranje"
+	        }
+	    },
+	    {
+	        "name": "led_butterfly_yellow",
+	        "title": {
+	            "en": "Butterfly - Yellow",
+	            "nl": "Vlinder - Geel"
+	        }
+	    },
+	    {
+	        "name": "led_butterfly_green",
+	        "title": {
+	            "en": "Butterfly - Green",
+	            "nl": "Vlinder - Groen"
+	        }
+	    },
+	    {
+	        "name": "led_butterfly_cyan",
+	        "title": {
+	            "en": "Butterfly - Cyan",
+	            "nl": "Vlinder - Cyaan"
+	        }
+	    },
+	    {
+	        "name": "led_butterfly_blue",
+	        "title": {
+	            "en": "Butterfly - Blue",
+	            "nl": "Vlinder - Blauw"
+	        }
+	    },
+	    {
+	        "name": "led_butterfly_purple",
+	        "title": {
+	            "en": "Butterfly - Purple",
+	            "nl": "Vlinder - Paars"
+	        }
+	    },
+	    {
+	        "name": "led_butterfly_magenta",
+	        "title": {
+	            "en": "Butterfly - Magenta",
+	            "nl": "Vlinder - Magenta"
+	        }
+	    },
+	    {
+	        "name": "led_butterfly_flow",
+	        "title": {
+	            "en": "Butterfly - Color flow",
+	            "nl": "Vlinder - Overvloeiende kleuren"
+	        }
+	    },
+	    {
 	        "name": "led_triangle_rgb",
 	        "title": {
 	            "en": "Triangle - Red Green Blue",
@@ -618,6 +776,13 @@
 	        }
 	    },
 	    {
+	        "name": "led_pulsetrain_flow",
+	        "title": {
+	            "en": "Pulse train - Color flow",
+	            "nl": "Pulstrein - Overvloeiende kleuren"
+	        }
+	    },
+	    {
 	        "name": "led_frontpulse_white",
 	        "title": {
 	            "en": "Frontal pulse - White",
@@ -678,6 +843,76 @@
 	        "title": {
 	            "en": "Frontal pulse - Magenta",
 	            "nl": "Frontale puls - Magenta"
+	        }
+	    },
+	    {
+	        "name": "led_pulsar_white",
+	        "title": {
+	            "en": "Pulsar - White",
+	            "nl": "Pulsar - Wit"
+	        }
+	    },
+	    {
+	        "name": "led_pulsar_red",
+	        "title": {
+	            "en": "Pulsar - Red",
+	            "nl": "Pulsar - Rood"
+	        }
+	    },
+	    {
+	        "name": "led_pulsar_orange",
+	        "title": {
+	            "en": "Pulsar - Orange",
+	            "nl": "Pulsar - Oranje"
+	        }
+	    },
+	    {
+	        "name": "led_pulsar_yellow",
+	        "title": {
+	            "en": "Pulsar - Yellow",
+	            "nl": "Pulsar - Geel"
+	        }
+	    },
+	    {
+	        "name": "led_pulsar_green",
+	        "title": {
+	            "en": "Pulsar - Green",
+	            "nl": "Pulsar - Groen"
+	        }
+	    },
+	    {
+	        "name": "led_pulsar_cyan",
+	        "title": {
+	            "en": "Pulsar - Cyan",
+	            "nl": "Pulsar - Cyaan"
+	        }
+	    },
+	    {
+	        "name": "led_pulsar_blue",
+	        "title": {
+	            "en": "Pulsar - Blue",
+	            "nl": "Pulsar - Blauw"
+	        }
+	    },
+	    {
+	        "name": "led_pulsar_purple",
+	        "title": {
+	            "en": "Pulsar - Purple",
+	            "nl": "Pulsar - Paars"
+	        }
+	    },
+	    {
+	        "name": "led_pulsar_magenta",
+	        "title": {
+	            "en": "Pulsar - Magenta",
+	            "nl": "Pulsar - Magenta"
+	        }
+	    },
+	    {
+	        "name": "led_pulsar_flow",
+	        "title": {
+	            "en": "Pulsar - Fast color flow",
+	            "nl": "Pulsar - Snel overvloeiende kleuren"
 	        }
 	    },
 	    {
@@ -1406,6 +1641,216 @@
 	        "title": {
 	            "en": "Eyes - Magenta",
 	            "nl": "Ogen - Magenta"
+	        }
+	    },
+	    {
+	        "name": "led_eyes_red_yellow",
+	        "title": {
+	            "en": "Eyes - Red & Yellow",
+	            "nl": "Ogen - Rood & Geel"
+	        }
+	    },
+	    {
+	        "name": "led_eyes_red_green",
+	        "title": {
+	            "en": "Eyes - Red & Green",
+	            "nl": "Ogen - Rood & Groen"
+	        }
+	    },
+	    {
+	        "name": "led_eyes_red_cyan",
+	        "title": {
+	            "en": "Eyes - Red & Cyan",
+	            "nl": "Ogen - Rood & Cyaan"
+	        }
+	    },
+	    {
+	        "name": "led_eyes_red_blue",
+	        "title": {
+	            "en": "Eyes - Red & Blue",
+	            "nl": "Ogen - Rood & Blauw"
+	        }
+	    },
+	    {
+	        "name": "led_eyes_red_magenta",
+	        "title": {
+	            "en": "Eyes - Red & Magenta",
+	            "nl": "Ogen - Rood & Magenta"
+	        }
+	    },
+	    {
+	        "name": "led_eyes_yellow_red",
+	        "title": {
+	            "en": "Eyes - Yellow & Red",
+	            "nl": "Ogen - Geel & Rood"
+	        }
+	    },
+	    {
+	        "name": "led_eyes_yellow_green",
+	        "title": {
+	            "en": "Eyes - Yellow & Green",
+	            "nl": "Ogen - Geel & Groen"
+	        }
+	    },
+	    {
+	        "name": "led_eyes_yellow_cyan",
+	        "title": {
+	            "en": "Eyes - Yellow & Cyan",
+	            "nl": "Ogen - Geel & Cyaan"
+	        }
+	    },
+	    {
+	        "name": "led_eyes_yellow_blue",
+	        "title": {
+	            "en": "Eyes - Yellow & Blue",
+	            "nl": "Ogen - Geel & Blauw"
+	        }
+	    },
+	    {
+	        "name": "led_eyes_yellow_magenta",
+	        "title": {
+	            "en": "Eyes - Yellow & Magenta",
+	            "nl": "Ogen - Geel & Magenta"
+	        }
+	    },
+	    {
+	        "name": "led_eyes_green_red",
+	        "title": {
+	            "en": "Eyes - Green & Red",
+	            "nl": "Ogen - Groen & Rood"
+	        }
+	    },
+	    {
+	        "name": "led_eyes_green_yellow",
+	        "title": {
+	            "en": "Eyes - Green & Yellow",
+	            "nl": "Ogen - Groen & Geel"
+	        }
+	    },
+	    {
+	        "name": "led_eyes_green_cyan",
+	        "title": {
+	            "en": "Eyes - Green & Cyan",
+	            "nl": "Ogen - Groen & Cyaan"
+	        }
+	    },
+	    {
+	        "name": "led_eyes_green_blue",
+	        "title": {
+	            "en": "Eyes - Green & Blue",
+	            "nl": "Ogen - Groen & Blauw"
+	        }
+	    },
+	    {
+	        "name": "led_eyes_green_magenta",
+	        "title": {
+	            "en": "Eyes - Green & Magenta",
+	            "nl": "Ogen - Groen & Magenta"
+	        }
+	    },
+	    {
+	        "name": "led_eyes_cyan_red",
+	        "title": {
+	            "en": "Eyes - Cyan & Red",
+	            "nl": "Ogen - Cyaan & Rood"
+	        }
+	    },
+	    {
+	        "name": "led_eyes_cyan_yellow",
+	        "title": {
+	            "en": "Eyes - Cyan & Yellow",
+	            "nl": "Ogen - Cyaan & Geel"
+	        }
+	    },
+	    {
+	        "name": "led_eyes_cyan_green",
+	        "title": {
+	            "en": "Eyes - Cyan & Green",
+	            "nl": "Ogen - Cyaan & Groen"
+	        }
+	    },
+	    {
+	        "name": "led_eyes_cyan_blue",
+	        "title": {
+	            "en": "Eyes - Cyan & Blue",
+	            "nl": "Ogen - Cyaan & Blauw"
+	        }
+	    },
+	    {
+	        "name": "led_eyes_cyan_magenta",
+	        "title": {
+	            "en": "Eyes - Cyan & Magenta",
+	            "nl": "Ogen - Cyaan & Magenta"
+	        }
+	    },
+	    {
+	        "name": "led_eyes_blue_red",
+	        "title": {
+	            "en": "Eyes - Blue & Red",
+	            "nl": "Ogen - Blauw & Rood"
+	        }
+	    },
+	    {
+	        "name": "led_eyes_blue_yellow",
+	        "title": {
+	            "en": "Eyes - Blue & Yellow",
+	            "nl": "Ogen - Blauw & Geel"
+	        }
+	    },
+	    {
+	        "name": "led_eyes_blue_green",
+	        "title": {
+	            "en": "Eyes - Blue & Green",
+	            "nl": "Ogen - Blauw & Groen"
+	        }
+	    },
+	    {
+	        "name": "led_eyes_blue_cyan",
+	        "title": {
+	            "en": "Eyes - Blue & Cyan",
+	            "nl": "Ogen - Blauw & Cyaan"
+	        }
+	    },
+	    {
+	        "name": "led_eyes_blue_magenta",
+	        "title": {
+	            "en": "Eyes - Blue & Magenta",
+	            "nl": "Ogen - Blauw & Magenta"
+	        }
+	    },
+	    {
+	        "name": "led_eyes_magenta_red",
+	        "title": {
+	            "en": "Eyes - Magenta & Red",
+	            "nl": "Ogen - Magenta & Rood"
+	        }
+	    },
+	    {
+	        "name": "led_eyes_magenta_yellow",
+	        "title": {
+	            "en": "Eyes - Magenta & Yellow",
+	            "nl": "Ogen - Magenta & Geel"
+	        }
+	    },
+	    {
+	        "name": "led_eyes_magenta_green",
+	        "title": {
+	            "en": "Eyes - Magenta & Green",
+	            "nl": "Ogen - Magenta & Groen"
+	        }
+	    },
+	    {
+	        "name": "led_eyes_magenta_cyan",
+	        "title": {
+	            "en": "Eyes - Magenta & Cyan",
+	            "nl": "Ogen - Magenta & Cyaan"
+	        }
+	    },
+	    {
+	        "name": "led_eyes_magenta_blue",
+	        "title": {
+	            "en": "Eyes - Magenta & Blue",
+	            "nl": "Ogen - Magenta & Blauw"
 	        }
 	    }
 	]
