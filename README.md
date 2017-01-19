@@ -7,7 +7,8 @@
 * Warnings in flows.
 * Informative indicators in flows.
 
-If you have any requests for LED Ring displays, please post them at https://forum.athom.com/discussion/2474/led-ring-collection
+If you have any requests for LED Ring displays, please post them at:
+https://forum.athom.com/discussion/2474/led-ring-collection
 
 The user's pleasure is my reward. People who like to show some extra gratitude can buy me a coffee.
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
