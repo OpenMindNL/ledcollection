@@ -36,15 +36,15 @@ Array.prototype.concat.apply([], [
 		screensaver
 	)),
 	[
-		{ id: 'led_solid_white', colors: [[127, 127, 127]] },
-		{ id: 'led_solid_red', colors: [[127, 0, 0]] },
-		{ id: 'led_solid_orange', colors: [[127, 42, 0]] },
-		{ id: 'led_solid_yellow', colors: [[127, 127, 0]] },
-		{ id: 'led_solid_green', colors: [[0, 127, 0]] },
-		{ id: 'led_solid_cyan', colors: [[0, 127, 127]] },
-		{ id: 'led_solid_blue', colors: [[0, 0, 127]] },
-		{ id: 'led_solid_purple', colors: [[32, 0, 127]] },
-		{ id: 'led_solid_magenta', colors: [[127, 0, 127]] }
+		{ id: 'led_solid_white', colors: [[255, 255, 255]] },
+		{ id: 'led_solid_red', colors: [[255, 0, 0]] },
+		{ id: 'led_solid_orange', colors: [[255, 85, 0]] },
+		{ id: 'led_solid_yellow', colors: [[255, 255, 0]] },
+		{ id: 'led_solid_green', colors: [[0, 255, 0]] },
+		{ id: 'led_solid_cyan', colors: [[0, 255, 255]] },
+		{ id: 'led_solid_blue', colors: [[0, 0, 255]] },
+		{ id: 'led_solid_purple', colors: [[64, 0, 255]] },
+		{ id: 'led_solid_magenta', colors: [[255, 0, 255]] }
 	].map(screensaver => Object.assign(
 		{ generator: generateSolid, options: Object.assign({ fps: 1, tfps: 60, rpm: 0 }, screensaver.options) },
 		screensaver
@@ -70,7 +70,8 @@ Array.prototype.concat.apply([], [
 		{ id: 'led_breathe_cyan', colors: [[0, 255, 255]] },
 		{ id: 'led_breathe_blue', colors: [[0, 0, 255]] },
 		{ id: 'led_breathe_purple', colors: [[64, 0, 255]] },
-		{ id: 'led_breathe_magenta', colors: [[255, 0, 255]] }
+		{ id: 'led_breathe_magenta', colors: [[255, 0, 255]] },
+		{ id: 'led_breathe_flow', colors: [[0, 0, 0]] }
 	].map(screensaver => Object.assign(
 		{ generator: generateBreathe, options: Object.assign({ fps: 1, tfps: 60, rpm: 0 }, screensaver.options) },
 		screensaver
@@ -85,7 +86,8 @@ Array.prototype.concat.apply([], [
 		{ id: 'led_sparkle_cyan', colors: [[0, 255, 255]] },
 		{ id: 'led_sparkle_blue', colors: [[0, 0, 255]] },
 		{ id: 'led_sparkle_purple', colors: [[64, 0, 255]] },
-		{ id: 'led_sparkle_magenta', colors: [[255, 0, 255]] }
+		{ id: 'led_sparkle_magenta', colors: [[255, 0, 255]] },
+		{ id: 'led_sparkle_flow', colors: [[0, 0, 0]] }
 	].map(screensaver => Object.assign(
 		{ generator: generateSparkle, options: Object.assign({ fps: 4, tfps: 60, rpm: 2 }, screensaver.options) },
 		screensaver
@@ -123,6 +125,36 @@ Array.prototype.concat.apply([], [
 		screensaver
 	)),
 	[
+		{ id: 'led_clockwork_white', colors: [[255, 255, 255]] },
+		{ id: 'led_clockwork_red', colors: [[255, 0, 0]] },
+		{ id: 'led_clockwork_orange', colors: [[255, 85, 0]] },
+		{ id: 'led_clockwork_yellow', colors: [[255, 255, 0]] },
+		{ id: 'led_clockwork_green', colors: [[0, 255, 0]] },
+		{ id: 'led_clockwork_cyan', colors: [[0, 255, 255]] },
+		{ id: 'led_clockwork_blue', colors: [[0, 0, 255]] },
+		{ id: 'led_clockwork_purple', colors: [[64, 0, 255]] },
+		{ id: 'led_clockwork_magenta', colors: [[255, 0, 255]] },
+		{ id: 'led_clockwork_flow', colors: [[0, 0, 0]] }
+	].map(screensaver => Object.assign(
+		{ generator: generateClockwork, options: Object.assign({ fps: 24, tfps: 60, rpm: 0 }, screensaver.options) },
+		screensaver
+	)),
+	[
+		{ id: 'led_butterfly_white', colors: [[255, 255, 255]] },
+		{ id: 'led_butterfly_red', colors: [[255, 0, 0]] },
+		{ id: 'led_butterfly_orange', colors: [[255, 85, 0]] },
+		{ id: 'led_butterfly_yellow', colors: [[255, 255, 0]] },
+		{ id: 'led_butterfly_green', colors: [[0, 255, 0]] },
+		{ id: 'led_butterfly_cyan', colors: [[0, 255, 255]] },
+		{ id: 'led_butterfly_blue', colors: [[0, 0, 255]] },
+		{ id: 'led_butterfly_purple', colors: [[64, 0, 255]] },
+		{ id: 'led_butterfly_magenta', colors: [[255, 0, 255]] },
+		{ id: 'led_butterfly_flow', colors: [[0, 0, 0]] }
+	].map(screensaver => Object.assign(
+		{ generator: generateButterfly, options: Object.assign({ fps: 5, tfps: 60, rpm: 0 }, screensaver.options) },
+		screensaver
+	)),
+	[
 		{ id: 'led_triangle_rgb', colors: [[255, 0, 0], [0, 255, 0], [0, 0, 255]] },
 		{ id: 'led_triangle_rgb_fast', colors: [[255, 0, 0], [0, 255, 0], [0, 0, 255]], options: { rpm: 60 } },
 		{ id: 'led_triangle_cmy', colors: [[0, 255, 255], [255, 0, 255], [255, 255, 0]] },
@@ -140,7 +172,8 @@ Array.prototype.concat.apply([], [
 		{ id: 'led_pulsetrain_cyan', colors: [[0, 255, 255]] },
 		{ id: 'led_pulsetrain_blue', colors: [[0, 0, 255]] },
 		{ id: 'led_pulsetrain_purple', colors: [[64, 0, 255]] },
-		{ id: 'led_pulsetrain_magenta', colors: [[255, 0, 255]] }
+		{ id: 'led_pulsetrain_magenta', colors: [[255, 0, 255]] },
+		{ id: 'led_pulsetrain_flow', colors: [[0, 0, 0]] }
 	].map(screensaver => Object.assign(
 		{ generator: generatePulsetrain, options: Object.assign({ fps: 12, tfps: 60, rpm: 17 }, screensaver.options) },
 		screensaver
@@ -157,6 +190,21 @@ Array.prototype.concat.apply([], [
 		{ id: 'led_frontpulse_magenta', colors: [[255, 0, 255]] }
 	].map(screensaver => Object.assign(
 		{ generator: generateFrontpulse, options: Object.assign({ fps: 9, tfps: 60, rpm: 0 }, screensaver.options) },
+		screensaver
+	)),
+	[
+		{ id: 'led_pulsar_white', colors: [[255, 255, 255]] },
+		{ id: 'led_pulsar_red', colors: [[255, 0, 0]] },
+		{ id: 'led_pulsar_orange', colors: [[255, 85, 0]] },
+		{ id: 'led_pulsar_yellow', colors: [[255, 255, 0]] },
+		{ id: 'led_pulsar_green', colors: [[0, 255, 0]] },
+		{ id: 'led_pulsar_cyan', colors: [[0, 255, 255]] },
+		{ id: 'led_pulsar_blue', colors: [[0, 0, 255]] },
+		{ id: 'led_pulsar_purple', colors: [[64, 0, 255]] },
+		{ id: 'led_pulsar_magenta', colors: [[255, 0, 255]] },
+		{ id: 'led_pulsar_flow', colors: [[0, 0, 0]] }
+	].map(screensaver => Object.assign(
+		{ generator: generatePulsar, options: Object.assign({ fps: 12, tfps: 60, rpm: 0 }, screensaver.options) },
 		screensaver
 	)),
 	[
@@ -292,15 +340,51 @@ Array.prototype.concat.apply([], [
 		screensaver
 	)),
 	[
-		{ id: 'led_eyes_white', colors: [[255, 255, 255]] },
-		{ id: 'led_eyes_red', colors: [[255, 0, 0]] },
-		{ id: 'led_eyes_orange', colors: [[255, 85, 0]] },
-		{ id: 'led_eyes_yellow', colors: [[255, 255, 0]] },
-		{ id: 'led_eyes_green', colors: [[0, 255, 0]] },
-		{ id: 'led_eyes_cyan', colors: [[0, 255, 255]] },
-		{ id: 'led_eyes_blue', colors: [[0, 0, 255]] },
-		{ id: 'led_eyes_purple', colors: [[64, 0, 255]] },
-		{ id: 'led_eyes_magenta', colors: [[255, 0, 255]] }
+		{ id: 'led_eyes_white', colors: [[255, 255, 255], [255, 255, 255]] },
+		{ id: 'led_eyes_red', colors: [[255, 0, 0], [255, 0, 0]] },
+		{ id: 'led_eyes_orange', colors: [[255, 85, 0], [255, 85, 0]] },
+		{ id: 'led_eyes_yellow', colors: [[255, 255, 0], [255, 255, 0]] },
+		{ id: 'led_eyes_green', colors: [[0, 255, 0], [0, 255, 0]] },
+		{ id: 'led_eyes_cyan', colors: [[0, 255, 255], [0, 255, 255]] },
+		{ id: 'led_eyes_blue', colors: [[0, 0, 255], [0, 0, 255]] },
+		{ id: 'led_eyes_purple', colors: [[64, 0, 255], [64, 0, 255]] },
+		{ id: 'led_eyes_magenta', colors: [[255, 0, 255], [255, 0, 255]] },
+
+		{ id: 'led_eyes_red_yellow', colors: [[255, 255, 0], [255, 0, 0]] },
+		{ id: 'led_eyes_red_green', colors: [[0, 255, 0], [255, 0, 0]] },
+		{ id: 'led_eyes_red_cyan', colors: [[0, 255, 255], [255, 0, 0]] },
+		{ id: 'led_eyes_red_blue', colors: [[0, 0, 255], [255, 0, 0]] },
+		{ id: 'led_eyes_red_magenta', colors: [[255, 0, 255], [255, 0, 0]] },
+
+		{ id: 'led_eyes_yellow_red', colors: [[255, 0, 0], [255, 255, 0]] },
+		{ id: 'led_eyes_yellow_green', colors: [[0, 255, 0], [255, 255, 0]] },
+		{ id: 'led_eyes_yellow_cyan', colors: [[0, 255, 255], [255, 255, 0]] },
+		{ id: 'led_eyes_yellow_blue', colors: [[0, 0, 255], [255, 255, 0]] },
+		{ id: 'led_eyes_yellow_magenta', colors: [[255, 0, 255], [255, 255, 0]] },
+
+		{ id: 'led_eyes_green_red', colors: [[255, 0, 0], [0, 255, 0]] },
+		{ id: 'led_eyes_green_yellow', colors: [[255, 255, 0], [0, 255, 0]] },
+		{ id: 'led_eyes_green_cyan', colors: [[0, 255, 255], [0, 255, 0]] },
+		{ id: 'led_eyes_green_blue', colors: [[0, 0, 255], [0, 255, 0]] },
+		{ id: 'led_eyes_green_magenta', colors: [[255, 0, 255], [0, 255, 0]] },
+
+		{ id: 'led_eyes_cyan_red', colors: [[255, 0, 0], [0, 255, 255]] },
+		{ id: 'led_eyes_cyan_yellow', colors: [[255, 255, 0], [0, 255, 255]] },
+		{ id: 'led_eyes_cyan_green', colors: [[0, 255, 0], [0, 255, 255]] },
+		{ id: 'led_eyes_cyan_blue', colors: [[0, 0, 255], [0, 255, 255]] },
+		{ id: 'led_eyes_cyan_magenta', colors: [[255, 0, 255], [0, 255, 255]] },
+
+		{ id: 'led_eyes_blue_red', colors: [[255, 0, 0], [0, 0, 255]] },
+		{ id: 'led_eyes_blue_yellow', colors: [[255, 255, 0], [0, 0, 255]] },
+		{ id: 'led_eyes_blue_green', colors: [[0, 255, 0], [0, 0, 255]] },
+		{ id: 'led_eyes_blue_cyan', colors: [[0, 255, 255], [0, 0, 255]] },
+		{ id: 'led_eyes_blue_magenta', colors: [[255, 0, 255], [0, 0, 255]] },
+
+		{ id: 'led_eyes_magenta_red', colors: [[255, 0, 0], [255, 0, 255]] },
+		{ id: 'led_eyes_magenta_yellow', colors: [[255, 255, 0], [255, 0, 255]] },
+		{ id: 'led_eyes_magenta_green', colors: [[0, 255, 0], [255, 0, 255]] },
+		{ id: 'led_eyes_magenta_cyan', colors: [[0, 255, 255], [255, 0, 255]] },
+		{ id: 'led_eyes_magenta_blue', colors: [[0, 0, 255], [255, 0, 255]] }
 	].map(screensaver => Object.assign(
 		{ generator: generateEyes, options: Object.assign({ fps: 2, tfps: 60, rpm: 0 }, screensaver.options) },
 		screensaver
@@ -321,7 +405,7 @@ Array.prototype.concat.apply([], [
 });
 
 
-// ==================== Pattern generators ==================== //
+// ==================== Pattern generators ====================
 
 function generateSolid( colRGB ) {
 	var frames = [];
@@ -359,7 +443,7 @@ function generateFlash( colRGB ) {
 
 function generateFlow() {
 	var frames = [];
-	var col = getColorFlow();
+	var col = getColorFlow(30);
 
 	// for every frame...
 	for( var fr = 0; fr < col.length; fr++ ){
@@ -378,22 +462,37 @@ function generateFlow() {
 function generateBreathe( colRGB ) {
 	var frames = [];
 	var maxFr = 8, divFr = maxFr/2, stepFr = 255/divFr;
-	var levMin = 8, levDiv = (255-levMin)/255 * stepFr; 
-	var divR = colRGB[0]/255, divG = colRGB[1]/255, divB = colRGB[2]/255; 
+	var levMin = 8, levDiv = (255-levMin)/255 * stepFr;
+
+	var nframe = maxFr;
+
+	if(colRGB[0] == 0 && colRGB[1] == 0 && colRGB[2] == 0){ // color flow
+		var nCycle = 11;
+		var col = getColorFlow(nCycle * nframe);
+	} else { // fixed color
+		var nCycle = 1;
+		var col = [colRGB]; for(var i = 0; i< nCycle * nframe; i++){ col.push(colRGB); }
+	}
+
+	// pattern cycles to complete 1 color cycle...
+	for( var cycle = 0; cycle < nCycle; cycle++ ){
+
 
 	// for every frame...
 	for( var fr = 0; fr < maxFr; fr++ ){
 		var frame = [];
 		var color = [0, 0, 0];
+		var xCol = col[cycle*nframe+ fr];
+		var divR = xCol[0]/255, divG = xCol[1]/255, divB = xCol[2]/255; 
 
 		if(fr < divFr){
-			if( colRGB[0]>0 ){ color[0] = Math.floor( (levMin + levDiv * fr)*divR ); }
-			if( colRGB[1]>0 ){ color[1] = Math.floor( (levMin + levDiv * fr)*divG ); }
-			if( colRGB[2]>0 ){ color[2] = Math.floor( (levMin + levDiv * fr)*divB ); }
+			if( xCol[0]>0 ){ color[0] = Math.floor( (levMin + levDiv * fr)*divR ); }
+			if( xCol[1]>0 ){ color[1] = Math.floor( (levMin + levDiv * fr)*divG ); }
+			if( xCol[2]>0 ){ color[2] = Math.floor( (levMin + levDiv * fr)*divB ); }
 		}else{
-			if( colRGB[0]>0 ){ color[0] = Math.floor( (levMin + levDiv * (maxFr-1-fr) )*divR ); }
-			if( colRGB[1]>0 ){ color[1] = Math.floor( (levMin + levDiv * (maxFr-1-fr) )*divG ); }
-			if( colRGB[2]>0 ){ color[2] = Math.floor( (levMin + levDiv * (maxFr-1-fr) )*divB ); }
+			if( xCol[0]>0 ){ color[0] = Math.floor( (levMin + levDiv * (maxFr-1-fr) )*divR ); }
+			if( xCol[1]>0 ){ color[1] = Math.floor( (levMin + levDiv * (maxFr-1-fr) )*divG ); }
+			if( xCol[2]>0 ){ color[2] = Math.floor( (levMin + levDiv * (maxFr-1-fr) )*divB ); }
 		}
 
 		// for every pixel...
@@ -401,6 +500,8 @@ function generateBreathe( colRGB ) {
 			frame.push({ r: color[0], g: color[1], b: color[2] });
 		}
 		frames.push(frame);
+	}
+
 	}
 	return frames;
 }
@@ -430,6 +531,19 @@ function generateRandomColors() {
 
 function generateSparkle( colRGB ) {
 	var frames = [];
+	var nframe = 30;
+
+	if(colRGB[0] == 0 && colRGB[1] == 0 && colRGB[2] == 0){ // color flow
+		var nCycle = 4;
+		var col = getColorFlow(nCycle * nframe);
+	} else { // fixed color
+		var nCycle = 1;
+		var col = [colRGB]; for(var i = 0; i< nCycle * nframe; i++){ col.push(colRGB); }
+	}
+
+	// pattern cycles to complete 1 color cycle...
+	for( var cycle = 0; cycle < nCycle; cycle++ ){
+
 
 	// for every frame...
 	for( var fr = 0; fr < 30; fr++ ){
@@ -444,7 +558,7 @@ function generateSparkle( colRGB ) {
 
 				for( var i=0; i<3; i++) {
 					if( colRGB[i] >= 0 ){
-						color[i] = Math.round(colRGB[i]/255 * dat);
+						color[i] = Math.round(col[cycle*nframe+ fr][i]/255 * dat);
 					}else{
 						color[i] = Math.floor( Math.random() * 4) *85;
 					}
@@ -457,6 +571,8 @@ function generateSparkle( colRGB ) {
 		}
 		frames.push(frame);
 	}
+
+	}
 	return frames;
 }
 
@@ -464,7 +580,7 @@ function generateSatellite( colRGB ) {
 	var frames = [];
 
 	if(colRGB[0] == 0 && colRGB[1] == 0 && colRGB[2] == 0){ // color flow
-		var col = getColorFlow();
+		var col = getColorFlow(30);
 	} else if(colRGB[0] == -1 && colRGB[1] == -1 && colRGB[2] == -1){ // random colors
 		var col = getRandomColors();
 	} else { // fixed color
@@ -489,7 +605,7 @@ function generateLighthouse( colRGB ){
 	var frames = [];
 
 	if(colRGB[0] == 0 && colRGB[1] == 0 && colRGB[2] == 0){ // color flow
-		var col = getColorFlow();
+		var col = getColorFlow(30);
 	} else if(colRGB[0] == -1 && colRGB[1] == -1 && colRGB[2] == -1){ // random colors
 		var col = getRandomColors();
 	} else { // fixed color
@@ -515,6 +631,119 @@ function generateLighthouse( colRGB ){
 	return frames;
 }
 
+function generateClockwork( colRGB ){
+	var frames = [];
+	var nframe = 48;
+
+	if(colRGB[0] == 0 && colRGB[1] == 0 && colRGB[2] == 0){ // color flow
+		var nCycle = 3;
+		var col = getColorFlow(nCycle * nframe);
+	} else { // fixed color
+		var nCycle = 1;
+		var col = [colRGB]; for(var i = 0; i< nCycle * nframe; i++){ col.push(colRGB); }
+	}
+
+	// pattern cycles to complete 1 color cycle...
+	for( var cycle = 0; cycle < nCycle; cycle++ ){
+
+	// for every frame...
+	for( var fr = 0; fr < nframe; fr++ ){
+		var frame = [];
+
+		// for every pixel...
+		for( var pixel = 0; pixel < 24; pixel++ ) {
+			var color = [0,0,0];
+			var px = pixel + 9; if( px > 23 ){px -= 24;}
+			var px2 = px + 12; if( px2 > 23 ){px2 -= 24;}
+			
+			if( fr<24 ){
+				if( (px == fr) || (px2 == fr) ){
+					color = col[cycle*nframe+ fr];
+				}
+			} else {
+				if( (px == 48 - fr) || (px2 == 48 - fr)  || (px + 24 == 48 - fr) || (px2 + 24 == 48 - fr) ){
+					color = col[cycle*nframe+ fr];
+				}
+			}
+			frame.push({ r: color[0], g: color[1], b: color[2] });
+		}
+		frames.push(frame);
+	}
+
+	}
+	return frames;
+}
+
+function generateButterfly( colRGB ){
+	var frames = [];
+	var nframe = 18;
+
+	if(colRGB[0] == 0 && colRGB[1] == 0 && colRGB[2] == 0){ // color flow
+		var nCycle = 7;
+		var col = getColorFlow(nCycle * nframe);
+	} else { // fixed color
+		var nCycle = 1;
+		var col = [colRGB]; for(var i = 0; i< nCycle * nframe; i++){ col.push(colRGB); }
+	}
+
+	
+	// pattern cycles to complete 1 color cycle...
+	for( var cycle = 0; cycle < nCycle; cycle++ ){
+
+	// for every frame...
+	for( var fr = 0; fr < nframe; fr++ ){
+		var frame = [];
+
+		// for every pixel...
+		for( var pixel = 0; pixel < 24; pixel++ ) {
+			var color = [0,0,0];
+			var px = pixel + 3; if( px > 23 ){px -= 24;}
+			
+			if( fr<6 ){ // expansion
+				var p1 = 6 - fr, p2 = 6 + fr;
+				var p3 = nframe - fr, p4 = nframe + fr;
+
+				if( (( px >= p1) && ( px <= p2 )) || (( px >= p3) && ( px <= p4 )) ){
+					color = col[cycle*nframe+ fr];
+					if(px != p1 && px != p2 && px != p3 && px != p4){
+						color = [Math.round(color[0] / 2), Math.round(color[1] / 2), Math.round(color[2] / 2)];
+					}
+				}
+
+			} else if( fr<10 ){ // contraction
+				var p1 = 6 - (10 - fr ), p2 = 6 + (10 - fr );
+				var p3 = nframe - (10 - fr ), p4 = nframe + (10 - fr );
+
+				if(( px >= p1 &&  px <= p2) || ( px >= p3 &&  px <= p4) ){
+					color = col[cycle*nframe+ fr];
+					if(px != p1 && px != p2 && px != p3 && px != p4){
+						color = [Math.round(color[0] / 2), Math.round(color[1] / 2), Math.round(color[2] / 2)];
+					}
+				}
+
+			} else  if( fr<14 ){ // fade-out
+				if( px == 6 || px == 18 ){
+					var div = Math.pow( 2, fr - 10 );
+					color = col[cycle*nframe+ fr];
+					color = [Math.round(color[0] / div), Math.round(color[1] / div), Math.round(color[2] / div)];
+				}
+
+			} else  if( fr<18 ){ // fade-in
+				if( px == 6 || px == 18 ){
+					var div = Math.pow( 2, 18 - fr );
+					color = col[cycle*nframe+ fr];
+					color = [Math.round(color[0] / div), Math.round(color[1] / div), Math.round(color[2] / div)];
+				}
+			}
+			frame.push({ r: color[0], g: color[1], b: color[2] });
+		}
+		frames.push(frame);
+	}
+
+	}
+	return frames;
+}
+
 function generateTriangle( colRGB1, colRGB2, colRGB3 ) {
 	var frames = [];
 	var frame = [];
@@ -531,27 +760,41 @@ function generateTriangle( colRGB1, colRGB2, colRGB3 ) {
 	return frames;
 }
 
-function generatePulsetrain( colRGB1 ) {
+function generatePulsetrain( colRGB ) {
 	var frames = [];
+	var nframe = 32;
+
+	if(colRGB[0] == 0 && colRGB[1] == 0 && colRGB[2] == 0){ // color flow
+		var nCycle = 6;
+		var col = getColorFlow(nCycle * nframe);
+	} else { // fixed color
+		var nCycle = 1;
+		var col = [colRGB]; for(var i = 0; i< nCycle * nframe; i++){ col.push(colRGB); }
+	}
+
+	// pattern cycles to complete 1 color cycle...
+	for( var cycle = 0; cycle < nCycle; cycle++ ){
 
 	// for every frame...
-	for( var fr = 0; fr < 32; fr++ ){
+	for( var fr = 0; fr < nframe; fr++ ){
 		var frame = [];
 	
 		if(fr<16){
 			var colDiv = Math.pow(2, fr/4);
 		} else {
-		var colDiv = Math.pow(2, (31-fr)/4);
+			var colDiv = Math.pow(2, (31-fr)/4);
 		}
 		// for every pixel...
 		for( var pixel = 0; pixel < 24; pixel += 1 ) {
 			var color = [ 0, 0, 0 ];
 			if( Math.floor(pixel/4)*4 == pixel){
-				color = [ Math.round(colRGB1[0]/colDiv), Math.round(colRGB1[1]/colDiv), Math.round(colRGB1[2]/colDiv) ];
+				color = [ Math.round(col[cycle*nframe+ fr][0]/colDiv), Math.round(col[cycle*nframe+ fr][1]/colDiv), Math.round(col[cycle*nframe+ fr][2]/colDiv) ];
 			}
 			frame.push({ r: color[0], g: color[1], b: color[2] });
 		}
 		frames.push(frame);
+	}
+
 	}
 	return frames;
 }
@@ -589,6 +832,54 @@ function generateFrontpulse( colRGB ) {
 			}
 
 			frame.push({ r: color[0], g: color[1], b: color[2] });
+		}
+		frames.push(frame);
+	}
+	return frames;
+}
+
+function generatePulsar( colRGB ) {
+	var frames = [];
+
+	if(colRGB[0] == 0 && colRGB[1] == 0 && colRGB[2] == 0){ // color flow
+		var col = getColorFlow(24);
+	} else { // fixed color
+		var col = [colRGB]; for(var i = 0; i<24; i++){ col.push(colRGB); }
+	}
+
+
+	// for every frame...
+	for( var fr = 0; fr < 24; fr++ ){
+		var frame = [];
+
+		// for every pixel...
+		for( var pixel = 0; pixel < 24; pixel++ ) {
+			var color = [0,0,0];
+			var px = pixel + 3; if( px > 23 ){px -= 24;}
+			
+			if( fr<12 ){
+				if( px >= 0 && px <= fr ){
+					color = col[fr];
+				} else if( px <= 24 && px >= 24-fr ){
+					color = col[fr];
+				}
+			} else {
+				if( px >= fr-12 && px <= 12 ){
+					color = col[fr];
+				} else if( px < 36-fr && px >= 12 ){
+					color = col[fr];
+				}
+			}
+
+			frame.push({ r: color[0], g: color[1], b: color[2] });
+		}
+		frames.push(frame);
+	}
+	// 50% off
+	for( var fr = 0; fr < 24; fr++ ){
+		var frame = [];
+		for( var pixel = 0; pixel < 24; pixel++ ) {
+			frame.push({ r: 0, g: 0, b: 0 });
 		}
 		frames.push(frame);
 	}
@@ -740,27 +1031,44 @@ function generateGort( colRGB1, colRGB2 ) {
 	return frames;
 }
 
-function generateEyes( colRGB1 ) {
+function generateEyes( colRGB1, colRGB2 ) {
 	var frames = [];
 	var color = [];
 	var pixcenter = 21, pixdest = 0, pixnum =[];
 	var blinkOn = false;
+	var nFrame = 120;
 
-	if( colRGB1[0] == 255 && colRGB1[1] == 255 && colRGB1[2] == 255 ){
-		var colRGB2 = [4, 4, 4];
-		var colRGB3 = [2, 2, 2];
+	if(colRGB1[0]==colRGB2[0] && colRGB1[1]==colRGB2[1] && colRGB1[2]==colRGB2[2]){
+		if( colRGB1[0] == 255 && colRGB1[1] == 255 && colRGB1[2] == 255 ){
+			var colRGB2 = [4, 4, 4];
+			var colRGB3 = [2, 2, 2];
+		} else {
+			var colRGB2 = [Math.round((255-colRGB1[0])/64), Math.round((255-colRGB1[1])/64), Math.round((255-colRGB1[2])/64) ];
+			var colRGB3 = [Math.round((255-colRGB1[0])/128), Math.round((255-colRGB1[1])/128), Math.round((255-colRGB1[2])/128) ];
+		}
+		var colRGB4 = [Math.round(colRGB1[0]/32), Math.round(colRGB1[1]/32), Math.round(colRGB1[2]/32) ];
+
 	} else {
-		var colRGB2 = [Math.round((255-colRGB1[0])/64), Math.round((255-colRGB1[1])/64), Math.round((255-colRGB1[2])/64) ];
-		var colRGB3 = [Math.round((255-colRGB1[0])/128), Math.round((255-colRGB1[1])/128), Math.round((255-colRGB1[2])/128) ];
+		var colDiv1 = 0; for(var i = 0; i<3; i++){ if( colRGB1[i] > 0){ colDiv1++; } }
+		var colDiv2 = 0; for(var i = 0; i<3; i++){ if( colRGB2[i] > 0){ colDiv2++; } }
+		
+		if( colDiv1 == colDiv2 ){ colDiv1 = 1; colDiv2 = 2; } else { colDiv2++; }
+
+		colRGB1 = [Math.round(colRGB1[0]/Math.pow( 2, colDiv1)), Math.round(colRGB1[1]/Math.pow( 2, colDiv1)), Math.round(colRGB1[2]/Math.pow( 2, colDiv1)) ];
+		colRGB2 = [Math.round(colRGB2[0]/Math.pow( 2, colDiv2)), Math.round(colRGB2[1]/Math.pow( 2, colDiv2)), Math.round(colRGB2[2]/Math.pow( 2, colDiv2)) ];
+
+		var colRGB3 = [Math.round(colRGB2[0]/1.5), Math.round(colRGB2[1]/1.5), Math.round(colRGB2[2]/1.5) ];
+		var colRGB4 = [Math.round(colRGB2[0]/8), Math.round(colRGB2[1]/8), Math.round(colRGB2[2]/8) ];
 	}
 
+
 	// for every frame...
-	for( var fr = 0; fr < 120; fr++ ){
+	for( var fr = 0; fr < nFrame ; fr++ ){
 		var frame = [];
 
 		// if at destination, set new center destination... or not
 		if( !blinkOn && pixdest == 0 && Math.random() >= 0.7 ){
-			pixdest = 21 + Math.floor(Math.random()*7-3);
+			pixdest = 21 + Math.round(Math.random()*6-3);
 		}
 		// move center toward destination
 		if(pixdest > 0 ){
@@ -775,18 +1083,20 @@ function generateEyes( colRGB1 ) {
 			if(blinkOn){
 				blinkOn = false;
 			} else {
-				blinkOn = Math.random()<0.07;
+				blinkOn = Math.random()<0.1;
 			}
 		}
 		// last frames: move to start position
-		if( fr >= 117 ){ pixdest = 21; }
+		if( fr >= nFrame -3 ){ pixdest = 21; }
 		
 		// get eye pixels
 		for( var i = 1; i<7; i++){
 			if(Math.floor(i/2)*2 == i ){
 				pixnum[i] = pixcenter - 1 - Math.floor((i+1)/2);
+				//if( i == 6 ){ pixnum[i]--; }
 			} else {
 				pixnum[i] = pixcenter + 1 + Math.floor((i+1)/2);
+				//if( i == 5 ){ pixnum[i]++; }
 			}
 			if( pixnum[i] > 23){ pixnum[i] -=24; } else if ( pixnum[i] < 0 ){pixnum[i] += 24;}
 		}
@@ -794,7 +1104,11 @@ function generateEyes( colRGB1 ) {
 		// for every pixel...
 		for( var pixel = 0; pixel < 24; pixel++ ) {
 			if( pixel == pixnum[1] || pixel == pixnum[2] ) { // eyes center side
-				color =  colRGB3;
+				if(blinkOn){
+					color =  colRGB4;
+				} else {
+					color =  colRGB3;
+				}
 			} else if( pixel == pixnum[3] || pixel == pixnum[4] ) { // eyes center
 				if(blinkOn){
 					color =  [0, 0, 0];
@@ -802,7 +1116,11 @@ function generateEyes( colRGB1 ) {
 					color =  colRGB1;
 				}
 			} else if( pixel == pixnum[5] || pixel == pixnum[6] ) { // eyes outside
-				color =  colRGB2;
+				if(blinkOn){
+					color =  colRGB4;
+				} else {
+					color =  colRGB2;
+				}
 			} else  { color = [0, 0, 0]; }
 
 			frame.push({ r: color[0], g: color[1], b: color[2] });
@@ -829,14 +1147,15 @@ function generateLedAlert( colRGB1, colRGB2 ) {
 
 // ==================== various functions ==================== //
 
-function getColorFlow(){
-	var fStep = 51, col = [], r = 255, g = 0, b = 0;
-	while( g < 255 ){ g += fStep; col.push([r, g, b]); }
-	while( r >0 )	{ r -= fStep; col.push([r, g, b]); }
-	while( b < 255 ){ b += fStep; col.push([r, g, b]); }
-	while( g >0 )	{ g -= fStep; col.push([r, g, b]); }
-	while( r < 255 ){ r += fStep; col.push([r, g, b]); }
-	while( b >0 )	{ b -= fStep; col.push([r, g, b]); }
+function getColorFlow(nStep){
+	var fStep = 255/(nStep/6), col = [], r = 255, g = 0, b = 0;
+	col.push([r, g, b]);
+	while( g < 255 ){ g += fStep; col.push([Math.round(r), Math.round(g), Math.round(b)]); }
+	while( r >0 )	{ r -= fStep; col.push([Math.round(r), Math.round(g), Math.round(b)]); }
+	while( b < 255 ){ b += fStep; col.push([Math.round(r), Math.round(g), Math.round(b)]); }
+	while( g >0 )	{ g -= fStep; col.push([Math.round(r), Math.round(g), Math.round(b)]); }
+	while( r < 255 ){ r += fStep; col.push([Math.round(r), Math.round(g), Math.round(b)]); }
+	while( b >0 )	{ b -= fStep; col.push([Math.round(r), Math.round(g), Math.round(b)]); }
 	return col;
 }
 
