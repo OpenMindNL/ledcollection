@@ -19,6 +19,9 @@ The user's pleasure is my reward. People who like to show some extra gratitude c
 </form>
 
 
+###v1.3.1
+* compatibility update to >=1.5.0 so it will run on Homey v2.0
+
 ###v1.3.0
 * 3 new patterns (30 displays):
 	* Clockwork - 9 colors & Color flow.
