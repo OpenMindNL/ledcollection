@@ -8,11 +8,15 @@
   "compatibility": ">=1.5.0",
   "sdk": 2,
   "author": {
-    "name": "Alex van den Berg",
-    "email": "openmind_nl@hotmail.com"
+    "name": "Martijn Poppen",
+    "email": "homey@martijnpoppen.nl"
   },
   "contributors": {
     "developers": [
+      {
+        "name": "Alex van den Berg",
+        "email": "openmind_nl@hotmail.com"
+      },
       {
         "name": "Martijn Poppen",
         "email": "homey@martijnpoppen.nl"
